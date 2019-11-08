@@ -3,30 +3,28 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-course-project": {
+    "Angular-Course-Project": {
+      "projectType": "application",
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "projectType": "application",
       "prefix": "app",
-      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-course-project",
+            "outputPath": "dist/Angular-Course-Project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "tsConfig": "tsconfig.app.json",
+            "aot": false,
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -50,6 +48,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -58,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-course-project:build"
+            "browserTarget": "Angular-Course-Project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-course-project:build:production"
+              "browserTarget": "Angular-Course-Project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-course-project:build"
+            "browserTarget": "Angular-Course-Project:build"
           }
         },
         "test": {
@@ -77,60 +80,38 @@
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
+            "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
-        }
-      }
-    },
-    "angular-course-project-e2e": {
-      "root": "e2e/",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
+        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-course-project:serve"
+            "devServerTarget": "Angular-Course-Project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-course-project:serve:production"
+              "devServerTarget": "Angular-Course-Project:serve:production"
             }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
     }
   },
-  "defaultProject": "angular-course-project"
+  "defaultProject": "Angular-Course-Project"
 }

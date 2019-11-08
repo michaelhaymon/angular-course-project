@@ -1,0 +1,24 @@
+{
+    "workbench.colorTheme": "Purple Night",
+    "workbench.colorCustomizations": {
+        "tab.activeBackground": "#777777",
+        "tab.activeBorder": "#660066",
+        "tab.activeForeground": "#660066"
+    },
+    "workbench.sideBar.location": "left",
+    "editor.formatOnSave": true,
+    "editor.autoIndent": false,
+    "workbench.settings.editor": "json",
+    "explorer.confirmDelete": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.jsxSingleQuote": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "prettier.proseWrap": "never",
+    "prettier.printWidth": 120
+}
