@@ -1,6 +1,6 @@
 import { Directive } from "@angular/core";
 
 @Directive({
-  selector: "[appDropdown]"
+  selector: '[appDropdown]'
 })
 export class DropdownDirective {}
