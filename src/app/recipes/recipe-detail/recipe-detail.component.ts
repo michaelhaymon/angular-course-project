@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 import { Recipe } from "../recipe.model";
 
@@ -9,13 +9,8 @@ import { Recipe } from "../recipe.model";
 })
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe;
-  dropdownState: boolean = false;
 
   constructor() {}
 
   ngOnInit() {}
-
-  toggleDropdown() {
-    this.dropdownState = !this.dropdownState;
-  }
 }
