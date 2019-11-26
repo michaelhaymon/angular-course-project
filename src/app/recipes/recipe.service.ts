@@ -16,7 +16,7 @@ export class RecipeService {
     new Recipe(
       'Another Test Recipe',
       'This is simply another test',
-      'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/3/30/0/0182146_hot-wings_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382543453894.jpeg'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn9vg5UhFq_sQsrpScxAU51WAfGSYvqnaq74ncML_U7wkRAAB7Pw&s'
     )
   ];
 
